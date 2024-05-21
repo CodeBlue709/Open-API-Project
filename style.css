@@ -1,0 +1,48 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Marvel;
+    src: url(MarvelRegular-Dj83.ttf);
+}
+
+#header-text{
+    margin: 0;
+    padding: 0;
+    font-family: Marvel;
+    font-size: 100px;
+    background-color: red;
+    color:white;
+    text-align: center;
+    width: 100%;
+    position: absolute
+}
+
+.body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    padding-bottom: 50px;
+}
+#character-roster{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 2000px;
+    margin: 20px;
+    list-style-type: none;
+}
+#character-roster img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+}
