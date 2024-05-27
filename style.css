@@ -1,13 +1,45 @@
 html, body {
-    margin: 0;
+    margin: 0 0 200px 0;
     padding: 0;
+}
+nav{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 120px;
+    
+    
+    
+}
+#char1-link, #char2-link, #return-btn{
+    margin: 0 10px;
+    border: 10px solid red;
+    border-radius:100px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#char1-link:hover,#char2-link:hover,#return-btn:hover{
+    background-color: lightcoral;
+    border: 10px solid lightcoral;
+}
+
+.hide-content{
+    display: none;
+    
 }
 
 @font-face {
     font-family: Marvel;
     src: url(MarvelRegular-Dj83.ttf);
 }
-
+figcaption{
+    text-align: center;
+    font-weight: bold;
+}
 #header-text{
     margin: 0;
     padding: 0;
@@ -17,32 +49,111 @@ html, body {
     color:white;
     text-align: center;
     width: 100%;
-    position: absolute
+    position: absolute;
+    
 }
 
-.body{
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+#character-roster {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    padding-bottom: 50px;
+    list-style: none;
+    padding: 150px;
 }
-#character-roster{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 2000px;
-    margin: 20px;
-    list-style-type: none;
+#character-roster li {
+    margin: 10px;
+    text-align: center;
 }
 #character-roster img {
-    width: 100%;
     height: auto;
     display: block;
-    object-fit: cover;
-    border-radius: 8px;
+    margin: 0 auto;
+    cursor: pointer;
 }
+#character-data {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#character-data img {
+    height: auto;
+}
+/* Additional styling for the character details section */
+#character-data div {
+    max-width: 800px;
+    margin: 20px;
+}
+/******************************************************* TABLET SIZING *******************************************************/
+@media only screen and (max-width: 1000px)  {
+
+    #header-text{
+        margin: 0;
+        padding: 0;
+        font-family: Marvel;
+        font-size: 70px;
+        background-color: red;
+        color:white;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+    }
+    .characters-container{
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding-bottom: 50px;
+    }
+    #character-roster{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 2000px;
+        margin: 20px;
+        list-style-type: none;
+    }
+}
+
+
+
+/************************************************** Small tablet and phone SIZING ******************************************************/
+@media only screen and (max-width: 550px)   {
+    img{
+        width:120px
+    }
+    #header-text{
+        margin: 0;
+        padding: 0;
+        font-family: Marvel;
+        font-size: 60px;
+        background-color: red;
+        color:white;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+    }
+    .characters-container{
+        font-family: Arial, sans-serif;
+        margin: 0;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        padding-bottom: 50px;
+    }
+    #character-roster{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 2000px;
+        margin: 20px;
+        list-style-type: none;
+    }
+}
+
