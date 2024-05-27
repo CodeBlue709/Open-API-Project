@@ -8,4 +8,4 @@ HOW TO USE
 
 (Character cards)
 -click on a characters image to see the information on them.
--in order to return to the main page just his the return button
+-in order to return to the main page just hit the return button
